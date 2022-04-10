@@ -58,7 +58,7 @@ public class DataProviders {
 		}
 
 	//Class --> AddToCartPageTest, EndToEndTest,  Test Case--> addToCartTest, endToEndTest	
-		@DataProvider(name = "getProduct")
+		@DataProvider(name = "ProductDetails")
 		public Object[][] getProduct() {
 			// Totals rows count
 			int rows = obj.getRowCount("ProductDetails");

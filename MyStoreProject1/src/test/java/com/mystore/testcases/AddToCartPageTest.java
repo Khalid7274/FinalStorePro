@@ -10,6 +10,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.mystore.base.BaseClass;
+import com.mystore.dataprovider.DataProviders;
 import com.mystore.pageobjects.AddToCartPage;
 import com.mystore.pageobjects.IndexPage;
 import com.mystore.pageobjects.SearchResultPage;
@@ -34,13 +35,13 @@ public class AddToCartPageTest extends BaseClass{
 		getDriver().quit();
 	}
 	
-	@Test(groups = {"Regression","Sanity"})
-	public void addToCartTest() {
+	@Test(groups = {"Regression","Sanity"}, dataProvider="ProductDetails", dataProviderClass = DataProviders.class)
+	public void addToCartTest(String productName, String qty, String size) {
 		indexPage = new IndexPage();
-		searchResultPage=indexPage.searchProduct("T-shirt");
+		searchResultPage=indexPage.searchProduct(productName);
 		addtoCartPage= searchResultPage.clickOnProduct();
-		addtoCartPage.enterQuantity("1");
-		addtoCartPage.selectSize("M");
+		addtoCartPage.enterQuantity(qty);
+		addtoCartPage.selectSize(size);
 		addtoCartPage.clickOnAddToCart();
 		boolean result=addtoCartPage.validateAddToCart();
 		Assert.assertTrue(result);

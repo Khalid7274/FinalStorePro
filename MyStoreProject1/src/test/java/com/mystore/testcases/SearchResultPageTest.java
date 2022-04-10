@@ -10,6 +10,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.mystore.base.BaseClass;
+import com.mystore.dataprovider.DataProviders;
 import com.mystore.pageobjects.IndexPage;
 import com.mystore.pageobjects.SearchResultPage;
 
@@ -32,11 +33,11 @@ public class SearchResultPageTest extends BaseClass{
 		getDriver().quit();
 	}
 	
-	@Test (groups="Smoke")
-	public void productAvailiabilityTest() {
+	@Test (groups="Smoke", dataProvider="searchProduct", dataProviderClass= DataProviders.class)
+	public void productAvailiabilityTest(String productName) {
 		indexPage = new IndexPage();
 		
-		searchResultPage=indexPage.searchProduct("T-Shirt");
+		searchResultPage=indexPage.searchProduct(productName);
 		boolean productAvailiability=searchResultPage.isProductAvailable();
 		Assert.assertTrue(productAvailiability);
 	}

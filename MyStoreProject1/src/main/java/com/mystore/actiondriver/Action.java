@@ -210,7 +210,7 @@ public class Action extends BaseClass  {
 	 */
 
 	
-	public boolean selectByValue(WebElement element,String value) {
+	public static boolean selectByValue(WebElement element,String value) {
 		boolean flag = false;
 		try {
 			Select s = new Select(element);

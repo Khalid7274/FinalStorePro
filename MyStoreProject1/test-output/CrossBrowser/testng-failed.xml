@@ -16,19 +16,4 @@
       </class> <!-- com.mystore.testcases.IndexPageTest -->
     </classes>
   </test> <!-- ChromeTest(failed) -->
-  <test thread-count="3" parallel="tests" name="FirFoxBrowser(failed)">
-    <parameter name="browser" value="Firefox"/>
-    <classes>
-      <class name="com.mystore.testcases.IndexPageTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="setup"/>
-          <include name="verifyLogo"/>
-          <include name="loadConfig"/>
-          <include name="afterSuite"/>
-          <include name="verifyTitle"/>
-        </methods>
-      </class> <!-- com.mystore.testcases.IndexPageTest -->
-    </classes>
-  </test> <!-- FirFoxBrowser(failed) -->
 </suite> <!-- Failed suite [CrossBrowser] -->

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Regression</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Apr 06 14:40:37 EDT 2022</td>
+<td>Started on:</td><td>Sun Apr 10 13:01:11 EDT 2022</td>
 </tr>
-<tr><td>Total time:</td><td>36 seconds (36495 ms)</td>
+<tr><td>Total time:</td><td>88 seconds (88146 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td>Regression </td>
 </tr><tr>
@@ -67,186 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.mystore.testcases.EndToEndTest.endToEndTest()'><b>endToEndTest</b><br>Test class: com.mystore.testcases.EndToEndTest</td>
-<td><div><pre>org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
-Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
-System info: host: &apos;DESKTOP-93B8F71&apos;, ip: &apos;192.168.0.5&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0aa62ce34eba012e3c87da4e810436b9, actions {actions=[org.openqa.selenium.interactions.Sequence@4116f66a]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.84, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\naimt\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50132}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50132/devtoo..., se:cdpVersion: 99.0.4844.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 0aa62ce34eba012e3c87da4e810436b9
-	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:362)
-	at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:154)
-	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
-	at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:169)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
-	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
-	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-	at org.openqa.selenium.json.JsonOutput.lambda$new$23(JsonOutput.java:169)
-	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
-	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:182)
-	at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:68)
-	at org.openqa.selenium.json.JsonOutput.lambda$new$25(JsonOutput.java:177)
-	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
-	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:278)
-	at org.openqa.selenium.json.Json.toJson(Json.java:42)
-	at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:259)
-	at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:127)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:172)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:611)
-	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:617)
-	at com.mystore.actiondriver.Action.click(Action.java:44)
-	at com.mystore.pageobjects.IndexPage.searchProduct(IndexPage.java:44)
-	at com.mystore.testcases.EndToEndTest.endToEndTest(EndToEndTest.java:56)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
-Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
-System info: host: &apos;DESKTOP-93B8F71&apos;, ip: &apos;192.168.0.5&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15&apos;
-Driver info: driver.version: RemoteWebDriver
-		at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:303)
-		at org.openqa.selenium.json.Json.toJson(Json.java:40)
-		... 39 more
-	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:358)
-	... 60 more
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.name: submit_search
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
-System info: host: &apos;DESKTOP-93B8F71&apos;, ip: &apos;192.168.0.5&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy14.getWrappedElement(Unknown Source)
-	at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:201)
-	at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:152)
-	at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:73)
-	at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:82)
-	... 65 more
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace756126725", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace756126725'><pre>org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
-Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
-System info: host: &apos;DESKTOP-93B8F71&apos;, ip: &apos;192.168.0.5&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0aa62ce34eba012e3c87da4e810436b9, actions {actions=[org.openqa.selenium.interactions.Sequence@4116f66a]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.84, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\naimt\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50132}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50132/devtoo..., se:cdpVersion: 99.0.4844.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 0aa62ce34eba012e3c87da4e810436b9
-	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:362)
-	at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:154)
-	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
-	at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:169)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
-	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
-	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-	at org.openqa.selenium.json.JsonOutput.lambda$new$23(JsonOutput.java:169)
-	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
-	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:182)
-	at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:68)
-	at org.openqa.selenium.json.JsonOutput.lambda$new$25(JsonOutput.java:177)
-	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
-	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:278)
-	at org.openqa.selenium.json.Json.toJson(Json.java:42)
-	at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:259)
-	at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:127)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:172)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:611)
-	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:617)
-	at com.mystore.actiondriver.Action.click(Action.java:44)
-	at com.mystore.pageobjects.IndexPage.searchProduct(IndexPage.java:44)
-	at com.mystore.testcases.EndToEndTest.endToEndTest(EndToEndTest.java:56)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:808)
-	at org.testng.TestRunner.run(TestRunner.java:603)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.runSuites(TestNG.java:1092)
-	at org.testng.TestNG.run(TestNG.java:1060)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-	Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
-Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
-System info: host: &apos;DESKTOP-93B8F71&apos;, ip: &apos;192.168.0.5&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15&apos;
-Driver info: driver.version: RemoteWebDriver
-		at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:303)
-		at org.openqa.selenium.json.Json.toJson(Json.java:40)
-		... 39 more
-Caused by: java.lang.reflect.InvocationTargetException
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:358)
-	... 60 more
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.name: submit_search
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
-System info: host: &apos;DESKTOP-93B8F71&apos;, ip: &apos;192.168.0.5&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy14.getWrappedElement(Unknown Source)
-	at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:201)
-	at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:152)
-	at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:73)
-	at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:82)
-	... 65 more
-</pre></div></td>
-<td>10</td>
-<td>com.mystore.testcases.EndToEndTest@4c583ecf</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -255,15 +75,35 @@ Driver info: driver.version: RemoteWebDriver
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.mystore.testcases.AddToCartPageTest.addToCartTest()'><b>addToCartTest</b><br>Test class: com.mystore.testcases.AddToCartPageTest</td>
+<td title='com.mystore.testcases.AccountCreationPageTest.createAccountTest()'><b>createAccountTest</b><br>Test class: com.mystore.testcases.AccountCreationPageTest<br>Parameters: {Company=ABCDEF, Email=poyte23@yahoo.com, Address=EDFG123, FirstName=TestUser, Gender=Mr, City=San, MobilePhone=8489875678, Month=7, Year=1985, State=Alabama, Zipcode=91436, Country=United States, LastName=UserTest, SetPassword=hgsdtyf, Day=22}</td>
 <td></td>
 <td>6</td>
-<td>com.mystore.testcases.AddToCartPageTest@4e50c791</td></tr>
+<td>com.mystore.testcases.AccountCreationPageTest@7b98f307</td></tr>
 <tr>
-<td title='com.mystore.testcases.OrderPageTest.verifyTotalPrice()'><b>verifyTotalPrice</b><br>Test class: com.mystore.testcases.OrderPageTest</td>
+<td title='com.mystore.testcases.OrderPageTest.verifyTotalPrice()'><b>verifyTotalPrice</b><br>Test class: com.mystore.testcases.OrderPageTest<br>Parameters: t-shirt, 2.0, M</td>
 <td></td>
 <td>8</td>
-<td>com.mystore.testcases.OrderPageTest@1e66f1f5</td></tr>
+<td>com.mystore.testcases.OrderPageTest@75db5df9</td></tr>
+<tr>
+<td title='com.mystore.testcases.AddToCartPageTest.addToCartTest()'><b>addToCartTest</b><br>Test class: com.mystore.testcases.AddToCartPageTest<br>Parameters: t-shirt, 2.0, M</td>
+<td></td>
+<td>4</td>
+<td>com.mystore.testcases.AddToCartPageTest@707194ba</td></tr>
+<tr>
+<td title='com.mystore.testcases.AccountCreationPageTest.createAccountTest()'><b>createAccountTest</b><br>Test class: com.mystore.testcases.AccountCreationPageTest<br>Parameters: {Company=ABCDEF, Email=utebvcx@gmail.com, Address=EDFG123, FirstName=TestUser, Gender=Mrs, City=San, MobilePhone=8489875678, Month=7, Year=1985, State=Alabama, Zipcode=91436, Country=United States, LastName=UserTest, SetPassword=hgsdtyf, Day=30}</td>
+<td></td>
+<td>6</td>
+<td>com.mystore.testcases.AccountCreationPageTest@7b98f307</td></tr>
+<tr>
+<td title='com.mystore.testcases.EndToEndTest.endToEndTest()'><b>endToEndTest</b><br>Test class: com.mystore.testcases.EndToEndTest<br>Parameters: t-shirt, 2.0, M</td>
+<td></td>
+<td>24</td>
+<td>com.mystore.testcases.EndToEndTest@71d44a3</td></tr>
+<tr>
+<td title='com.mystore.testcases.AccountCreationPageTest.createAccountTest()'><b>createAccountTest</b><br>Test class: com.mystore.testcases.AccountCreationPageTest<br>Parameters: {Company=ABCDEF, Email=lkmnbve@gmail.com, Address=EDFG123, FirstName=TestUser, Gender=Mrs, City=San, MobilePhone=8489875678, Month=7, Year=1985, State=Alabama, Zipcode=91436, Country=United States, LastName=UserTest, SetPassword=hgsdtyf, Day=23}</td>
+<td></td>
+<td>10</td>
+<td>com.mystore.testcases.AccountCreationPageTest@7b98f307</td></tr>
 </table><p>
 </body>
 </html>

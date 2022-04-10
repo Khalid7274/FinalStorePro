@@ -10,6 +10,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.mystore.base.BaseClass;
+import com.mystore.dataprovider.DataProviders;
 import com.mystore.pageobjects.AddToCartPage;
 import com.mystore.pageobjects.AddressPage;
 import com.mystore.pageobjects.IndexPage;
@@ -50,13 +51,13 @@ public class EndToEndTest extends BaseClass{
 		getDriver().quit();
 	}
 	
-	@Test (groups= "Regression")
-	public void endToEndTest() throws Exception {
+	@Test (groups= "Regression", dataProvider="ProductDetails", dataProviderClass= DataProviders.class)
+	public void endToEndTest(String productName, String qty, String size) throws Exception {
 		indexPage = new IndexPage();
-		searchResultPage=indexPage.searchProduct("T-shirt");
+		searchResultPage=indexPage.searchProduct(productName);
 		addtoCartPage= searchResultPage.clickOnProduct();
-		addtoCartPage.enterQuantity("2");
-		addtoCartPage.selectSize("M");
+		addtoCartPage.enterQuantity(qty);
+		addtoCartPage.selectSize(size);
 		addtoCartPage.clickOnAddToCart();
 		orderPage=addtoCartPage.clickOnProceedToCheckOut();
 		loginPage=orderPage.clickOnCheckout();

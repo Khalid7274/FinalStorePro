@@ -10,6 +10,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.mystore.base.BaseClass;
+import com.mystore.dataprovider.DataProviders;
 import com.mystore.pageobjects.AddToCartPage;
 import com.mystore.pageobjects.IndexPage;
 import com.mystore.pageobjects.LoginPage;
@@ -38,18 +39,18 @@ public class OrderPageTest extends BaseClass{
 		getDriver().quit();
 	}
 	
-	@Test(groups="Regression")
-	public void verifyTotalPrice() throws Exception {
+	@Test(groups="Regression", dataProvider="ProductDetails", dataProviderClass= DataProviders.class)
+	public void verifyTotalPrice(String productName, String qty, String size) throws Exception {
 		indexPage = new IndexPage();
-		searchResultPage=indexPage.searchProduct("T-shirt");
+		searchResultPage=indexPage.searchProduct(productName);
 		addtoCartPage= searchResultPage.clickOnProduct();
-		addtoCartPage.enterQuantity("2");
-		addtoCartPage.selectSize("M");
+		addtoCartPage.enterQuantity(qty);
+		addtoCartPage.selectSize(size);
 		addtoCartPage.clickOnAddToCart();
 		orderPage=addtoCartPage.clickOnProceedToCheckOut();
 		double unitPrice=orderPage.getUnitPrice();
 		double totalPrice=orderPage.getTotalPrice();
-		double expectedPrice=unitPrice*2+2;
+		double expectedPrice=(unitPrice*(Double.parseDouble(qty)))+2;
 		Assert.assertEquals(totalPrice, expectedPrice);
 		loginPage=orderPage.clickOnCheckout();
 	}
